@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block body %}
+<h3>View Blind</h3>
+<table width="200" border="1">
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Age</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Phone</th>
+    <th scope="col">Address</th>
+    <th colspan="2" scope="col">Actions</th>
+  </tr>
+  {% for i in val %}
+  <tr>
+    <td>{{i[2]}}</td>
+    <td>{{i[3]}}</td>
+    <td>&nbsp;{{i[5]}}</td>
+    <td>&nbsp;{{i[4]}}</td>
+    <td>&nbsp;{{i[6]}} {{i[7]}}, {{i[8]}}</td>
+    <td><a href="http://maps.google.com?q={{i[10]}},{{i[11]}}">View</a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

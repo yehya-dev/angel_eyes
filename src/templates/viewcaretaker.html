@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block body %}
+<h3>View Caretaker</h3>
+<table width="200" border="1">
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Contact</th>
+    <th scope="col">Age</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Blinds</th>
+  </tr>
+  {%for i in val%}
+  <tr>
+    <td>{{i[2]}}</td>
+    <td>{{i[3]}}</td>
+    <td>{{i[4]}}</td>
+    <td>{{i[5]}}</td>
+    <td><a href="/viewblindadmin?id={{i[1]}}">View Blind People</a></td>
+  </tr>
+  {%endfor%}
+</table>
+{% endblock %}

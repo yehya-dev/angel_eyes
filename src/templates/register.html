@@ -1,0 +1,95 @@
+{% extends 'index.html' %}
+{% block body %}
+<h3>Caretaker Register</h3>
+<form method="POST" action="/createcaretaker">
+<table width="200" border="1">
+  <tr>
+    <th scope="row">Name</th>
+    <td><label>
+      <input type="text" name="name" required pattern="[A-Z a-z.]{3,50}"/>
+    </label></td>
+  </tr>
+  <tr>
+    <th scope="row">Age</th>
+    <td><label>
+      <input type="text" name="age" required pattern="[0-9]{1,3}"/>
+    </label></td>
+  </tr>
+  <tr>
+    <th scope="row">Gender</th>
+    <td><label>
+      <input name="gender" type="radio" value="M" checked />
+      Male
+      <input name="gender" type="radio" value="F" />
+      Female</label></td>
+  </tr>
+  <tr>
+    <th scope="row">District</th>
+    <td><label>
+      <select name="district">
+        <option value="wayanad">Wayanad</option>
+        <option value="calicut">Calicut</option>
+        <option value="kasargode">Kasargod</option>
+        <option value="kannur">Kannur</option>
+        <option value="palakkad">Palakkad</option>
+        <option value="thrissur">Thrissur</option>
+        <option value="idukki">Idukki</option>
+        <option value="eranakulam">Eranakulam</option>
+        <option value="alappuzha">Alappuzha</option>
+        <option value="kollam">Kollam</option>
+        <option value="kottayam">Kottayam</option>
+        <option value="pathanamthitta">Pathanamthitta</option>
+        <option value="thiruvananthapuram">Thiruvananthapuram</option>
+        <option value="malappuram">Malappuram</option>
+      </select>
+    </label></td>
+  </tr>
+  <tr>
+    <th scope="row">Place</th>
+    <td><label>
+      <input type="text" name="place" required pattern="[A-Z a-z.]{3,25}"/>
+    </label></td>
+  </tr>
+  <tr>
+    <th scope="row">PIN</th>
+    <td><label>
+      <input type="text" name="pin" required pattern="[0-9]{6}"/>
+    </label></td>
+  </tr>
+  <tr>
+    <th scope="row">POST</th>
+    <td><label>
+      <input type="text" name="post" required pattern="[A-Z a-z.]{3,25}"/>
+    </label></td>
+  </tr>
+  <tr>
+    <th scope="row">Phone</th>
+    <td><input type="tel" name="phone" required pattern="[6789][0-9]{9}"/></td>
+  </tr>
+  <tr>
+    <th scope="row"><p>Email</p>
+      </th>
+    <td><label>
+      <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"/>
+    </label></td>
+  </tr>
+  <tr>
+    <th scope="row">Username</th>
+    <td><label>
+      <input type="text" name="username" required/>
+    </label></td>
+  </tr>
+  <tr>
+    <th scope="row">Password</th>
+    <td><label>
+      <input type="password" name="password" required/>
+    </label></td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"><label>
+      <input type="submit" name="Submit" value="Register" />
+    </label></th>
+  </tr>
+</table>
+</form>
+{% endblock %}

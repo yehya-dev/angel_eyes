@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block body %}
+<h3>Known people list</h3>
+<table width="200" border="1">
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Photo</th>
+    <th colspan="3" scope="col">Actions</th>
+  </tr>
+  {% for i in res %}
+  <tr>
+      <td style="padding: 5px;">{{i[2]}}</td>
+      <td style="padding: 5px;"><img src="{{i[3]}}"></td>
+      <td style="padding: 5px;"><a href="/deleteknown?id={{i[0]}}&blind={{i[0]}}">Delete Person</a></td>
+  </tr>
+  {% endfor %}
+</table>
+<p>
+    <a href="/addknownview?id={{ blind }}">Add New</a>
+</p>
+{% endblock %}

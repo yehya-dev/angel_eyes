@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% block body %}
+<h3>Volunteer Register</h3>
+<form method="POST" action="/addvolunteer">
+<table width="200" border="1">
+  <tr>
+    <th scope="row">Name</th>
+    <td><label>
+      <input type="text" name="name" required pattern="[A-Z a-z.]{3,50}"/>
+    </label></td>
+  </tr>
+  <tr>
+    <th scope="row">Place</th>
+    <td><label>
+      <input type="text" name="place" required pattern="[A-Z a-z.]{3,50}"/>
+    </label></td>
+  </tr>
+  <tr>
+    <th scope="row">Post</th>
+      <td><label>
+<input type="text" name="post" required pattern="[A-Z a-z.]{3,50}"/>
+  </label></td>
+  </tr>
+  <tr>
+    <th scope="row">Email</th>
+      <td><label>
+    <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}"/>
+   </label></td>
+  </tr>
+  <tr>
+    <th scope="row">Phone Number</th>
+    <td><label>
+      <input type="tel" name="phone" required pattern="[6789][0-9]{9}"/>
+    </label></td>
+  </tr>
+
+  <tr>
+    <th colspan="2" scope="row"><label>
+      <input type="submit" name="Submit" value="Register" />
+    </label></th>
+  </tr>
+</table>
+</form>
+{% endblock %}

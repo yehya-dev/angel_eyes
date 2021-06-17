@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block body %}
+<h3>Add Feedback</h3>
+
+<form id="form1" method="post" action="/createfeedback">
+  <table width="200" border="1">
+    <tr>
+      <td>Feedback</td>
+      <td><textarea name="feedback"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Add" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+

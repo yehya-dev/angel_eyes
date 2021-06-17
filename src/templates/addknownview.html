@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% block body %}
+<h3>Add Known People</h3>
+<form action="/addknown" method="POST" enctype="multipart/form-data">
+    <input type="hidden" value="{{blind}}" name="blind">
+    <table width="200" border="1">
+  <tr>
+    <th scope="col">Person Name</th>
+    <td><input type="text" name="personName"></td>
+
+  </tr>
+  <tr>
+    <th scope="col">Photo</th>
+    <td><input type="file" name="photo"></td>
+  </tr>
+</table>
+    <input type="submit">
+</form>
+{% endblock %}
