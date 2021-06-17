@@ -29,6 +29,9 @@ as a guide, that is, by filming their surroundings constantly to recognise objec
 ## Note
 Download the [yolo3.weights](https://pjreddie.com/media/files/yolov3.weights) file to the  `src/static/yolo` directory.
 
+- run `python src/webservice.py` to start the apis.
+- run `python src/app.py` to start the web interface. 
+
 ## Dependencies 
 **Python**
 - requests==2.22.0
@@ -43,3 +46,4 @@ Download the [yolo3.weights](https://pjreddie.com/media/files/yolov3.weights) fi
 - runner:1.0.2
 - espresso-core:3.0.2
 - volley:1.1.0
+
